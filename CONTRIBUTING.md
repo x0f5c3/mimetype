@@ -1,6 +1,6 @@
 ## Contribute
 Contributions to **mimetype** are welcome. If you find an issue and you consider
-contributing, you can use the [Github issues tracker](https://github.com/gabriel-vasile/mimetype/issues)
+contributing, you can use the [Github issues tracker](https://github.com/wailsapp/mimetype/issues)
 in order to report it, or better yet, open a pull request.
 
 Code contributions must respect these rules:

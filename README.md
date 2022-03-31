@@ -13,11 +13,11 @@
   <a href="https://travis-ci.org/gabriel-vasile/mimetype">
     <img alt="Build Status" src="https://travis-ci.org/gabriel-vasile/mimetype.svg?branch=master">
   </a>
-  <a href="https://pkg.go.dev/github.com/gabriel-vasile/mimetype">
-    <img src="https://pkg.go.dev/badge/github.com/gabriel-vasile/mimetype.svg" alt="Go Reference">
+  <a href="https://pkg.go.dev/github.com/wailsapp/mimetype">
+    <img src="https://pkg.go.dev/badge/github.com/wailsapp/mimetype.svg" alt="Go Reference">
   </a>
-  <a href="https://goreportcard.com/report/github.com/gabriel-vasile/mimetype">
-    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/gabriel-vasile/mimetype">
+  <a href="https://goreportcard.com/report/github.com/wailsapp/mimetype">
+    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/wailsapp/mimetype">
   </a>
   <a href="https://coveralls.io/github/gabriel-vasile/mimetype?branch=master">
     <img alt="Go report card" src="https://coveralls.io/repos/github/gabriel-vasile/mimetype/badge.svg?branch=master">
@@ -30,14 +30,14 @@
 ## Features
 - fast and precise MIME type and file extension detection
 - long list of [supported MIME types](supported_mimes.md)
-- posibility to [extend](https://pkg.go.dev/github.com/gabriel-vasile/mimetype#example-package-Extend) with other file formats
+- posibility to [extend](https://pkg.go.dev/github.com/wailsapp/mimetype#example-package-Extend) with other file formats
 - common file formats are prioritized
-- [text vs. binary files differentiation](https://pkg.go.dev/github.com/gabriel-vasile/mimetype#example-package-TextVsBinary)
+- [text vs. binary files differentiation](https://pkg.go.dev/github.com/wailsapp/mimetype#example-package-TextVsBinary)
 - safe for concurrent usage
 
 ## Install
 ```bash
-go get github.com/gabriel-vasile/mimetype
+go get github.com/wailsapp/mimetype
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ mtype, err := mimetype.DetectReader(io.Reader)
 mtype, err := mimetype.DetectFile("/path/to/file")
 fmt.Println(mtype.String(), mtype.Extension())
 ```
-See the [runnable Go Playground examples](https://pkg.go.dev/github.com/gabriel-vasile/mimetype#pkg-overview).
+See the [runnable Go Playground examples](https://pkg.go.dev/github.com/wailsapp/mimetype#pkg-overview).
 
 ## Usage'
 Only use libraries like **mimetype** as a last resort. Content type detection
@@ -71,7 +71,7 @@ mimetype.SetLimit(0) // No limit, whole file content used.
 mimetype.DetectFile("file.doc")
 ```
 If increasing the limit does not help, please
-[open an issue](https://github.com/gabriel-vasile/mimetype/issues/new?assignees=&labels=&template=mismatched-mime-type-detected.md&title=).
+[open an issue](https://github.com/wailsapp/mimetype/issues/new?assignees=&labels=&template=mismatched-mime-type-detected.md&title=).
 
 ## Structure
 **mimetype** uses a hierarchical structure to keep the MIME type detection logic.
@@ -83,11 +83,11 @@ zip, there is no need to check if it is a text file, but it is worth checking if
 it is an Microsoft Office file.
 
 To prevent loading entire files into memory, when detecting from a
-[reader](https://pkg.go.dev/github.com/gabriel-vasile/mimetype#DetectReader)
-or from a [file](https://pkg.go.dev/github.com/gabriel-vasile/mimetype#DetectFile)
+[reader](https://pkg.go.dev/github.com/wailsapp/mimetype#DetectReader)
+or from a [file](https://pkg.go.dev/github.com/wailsapp/mimetype#DetectFile)
 **mimetype** limits itself to reading only the header of the input.
 <div align="center">
-  <img alt="structure" src="https://github.com/gabriel-vasile/mimetype/blob/420a05228c6a6efbb6e6f080168a25663414ff36/mimetype.gif?raw=true" width="88%">
+  <img alt="structure" src="https://github.com/wailsapp/mimetype/blob/420a05228c6a6efbb6e6f080168a25663414ff36/mimetype.gif?raw=true" width="88%">
 </div>
 
 ## Performance

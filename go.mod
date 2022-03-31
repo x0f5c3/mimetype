@@ -1,4 +1,4 @@
-module github.com/gabriel-vasile/mimetype
+module github.com/wailsapp/mimetype
 
 go 1.12
 

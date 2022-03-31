@@ -6,7 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/gabriel-vasile/mimetype"
+	"github.com/wailsapp/mimetype"
 )
 
 // Pure io.Readers (meaning those without a Seek method) cannot be read twice.
