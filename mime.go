@@ -3,8 +3,8 @@ package mimetype
 import (
 	"mime"
 
-	"github.com/gabriel-vasile/mimetype/internal/charset"
-	"github.com/gabriel-vasile/mimetype/internal/magic"
+	"github.com/wailsapp/mimetype/internal/charset"
+	"github.com/wailsapp/mimetype/internal/magic"
 )
 
 // MIME struct holds information about a file format: the string representation

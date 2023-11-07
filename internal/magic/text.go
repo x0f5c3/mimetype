@@ -6,13 +6,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gabriel-vasile/mimetype/internal/charset"
-	"github.com/gabriel-vasile/mimetype/internal/json"
+	"github.com/wailsapp/mimetype/internal/charset"
+	"github.com/wailsapp/mimetype/internal/json"
 )
 
 var (
 	// HTML matches a Hypertext Markup Language file.
 	HTML = markup(
+		append([]byte{0xEF, 0xBB, 0xBF}, []byte("<!DOCTYPE HTML")...),
 		[]byte("<!DOCTYPE HTML"),
 		[]byte("<HTML"),
 		[]byte("<HEAD"),
